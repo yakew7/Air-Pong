@@ -3,6 +3,7 @@
 Air Pong is a modern reimagining of the classic Pong game, controlled entirely using AI-based hand tracking Instead of keyboards or controllers, players use their hands in front of a webcam to move paddles in real time, creating a fun, interactive, and futuristic gaming experience.
 
 The game uses MediaPipe Hands with TensorFlow.js to detect and track hand movements accurately and smoothly.
+Note: It's better to run this on a live server since it looks better and more understandable
 
 ## Features
 
