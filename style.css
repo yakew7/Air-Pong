@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg,#ff6b6b,#4ecdc4,#ffe66d);
+  background-size: 400% 400%;
+  animation: bg 15s infinite;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+@keyframes bg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+h1 {
+  font-family: "Fredoka One", cursive;
+  font-size: 3rem;
+}
+
+.controls {
+  margin: 1rem 0;
+}
+
+button {
+  padding: 0.6rem 1.4rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin: 0 0.4rem;
+}
+
+.game-layout {
+  display: grid;
+  grid-template-columns: 220px auto 220px;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.side-panel video {
+  width: 210px;
+  height: 160px;
+  border-radius: 12px;
+  border: 3px solid white;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.canvas-wrapper {
+  border: 6px solid white;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+
+canvas {
+  background: black;
+  border-radius: 14px;
+}
+
+.scoreboard {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+}

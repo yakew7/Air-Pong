@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Air Pong</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>Air Pong</h1>
+
+    <p id="controlHint" class="instructions">
+      Use RIGHT hand
+    </p>
+    <p class="instructions small">First to 11 points wins</p>
+
+
+    <div class="game-layout">
+
+      <!-- LEFT CAMERA -->
+      <div id="leftCam" class="side-panel">
+        <video id="webcamLeft" autoplay playsinline></video>
+        <p class="hint">Player 1</p>
+      </div>
+
+      <!-- GAME -->
+      <div class="canvas-wrapper">
+        <video id="webcam" autoplay playsinline></video>
+        <canvas id="gameCanvas" width="720" height="520"></canvas>
+
+        <div id="overlay" class="overlay">
+          <h2>Choose Mode</h2>
+
+          <div class="mode-select">
+            <button id="onePlayerBtn">1 Player</button>
+            <button id="twoPlayerBtn">2 Player</button>
+          </div>
+
+          <button id="startButton">Start Game</button>
+        </div>
+      </div>
+
+      <!-- RIGHT CAMERA -->
+      <div id="rightCam" class="side-panel hidden">
+        <video id="webcamRight" autoplay playsinline></video>
+        <p class="hint">Player 2</p>
+      </div>
+
+    </div>
+
+    <div class="scoreboard">
+      <span>Player 1: <span id="playerScore">0</span></span>
+      <span>Player 2: <span id="aiScore">0</span></span>
+      <a href="../index.html" class="back-btn">← Back</a>
+    </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/hand-pose-detection"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
